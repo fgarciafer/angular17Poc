@@ -1,0 +1,14 @@
+.loading{
+    min-height: 80vh;
+}
+
+.clickme {
+    height: 200px;
+    width: 200px;
+    background-color: blueviolet;
+}
+
+.interactive {
+    display: flex;
+    gap: 2rem;
+}

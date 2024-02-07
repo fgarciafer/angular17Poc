@@ -1,0 +1,44 @@
+
+<p-tabView>
+  <p-tabPanel header="SSR">
+      <p>
+        Server-side rendering (SSR) is a process that involves rendering pages on the server, resulting in initial HTML content which contains initial page state. Once the HTML content is delivered to a browser, Angular initializes the application and utilizes the data contained within the HTML.
+      </p>
+      <pre><code>
+        {{ssr1}}
+      </code></pre>
+      <pre><code>
+        {{ssr2}}
+      </code></pre>
+      <a>https://angular.io/guide/ssr</a>
+  </p-tabPanel>
+  <p-tabPanel header="New lifecycle hooks">
+      <p><strong>afterRender</strong> — Registra una llamada de retorno que será invocada cada vez que la aplicación termine de renderizar.</p>
+        <p><strong>afterNextRender</strong> — Registra una llamada de retorno que será invocada la próxima vez que la aplicación termine de renderizar.
+      </p>
+  </p-tabPanel>
+  <p-tabPanel header="Vite + esbuild">
+    <h3>Vite and esbuild the default for new projects</h3>
+    <img class="imageLogo" src="assets/images/vite.webp">
+    <p>
+      Los compiladores Esbuild y Vite estarán habilitados por defecto a partir de esta versión. Este cambio mejorará la velocidad de compilación.
+    </p>
+</p-tabPanel>
+<p-tabPanel header="Dependency injection debugging in DevTools">
+  <p>
+    A partir de Angular 17, los servicios que se inyectan en un componente o contexto directivo se pueden ver en el visor de propiedades. Después de seleccionar un componente en particular, si ese componente tiene dependencias, podrá verlos enumerados en la barra "Servicios inyectados".
+  </p>
+  <img class="imageLogo" src="assets/images/inj.png">
+</p-tabPanel>
+<p-tabPanel header="Signals">
+  <p>
+    El cambio de la reactividad de Angular a Signals representa una mejora significativa en la capacidad de detección de cambios y el rendimiento en comparación con la implementación anterior basada en ZoneJs.
+  </p>
+  <pre><code>{{signal1}}</code></pre>
+  <pre><code>{{signal2}}</code></pre>
+  <pre><code>{{signal3}}</code></pre>
+  <pre><code>{{signal4}}</code></pre>
+  <pre><code>{{signal5}}</code></pre>
+  <pre><code>{{signal6}}</code></pre>
+</p-tabPanel>
+</p-tabView>

@@ -1,0 +1,16 @@
+.header {
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.header img {
+  margin-left: 2rem;
+}
+
+a, a:visited, a:hover, a:active {
+  color: inherit;
+}
+
+.imageLogo{
+  width: 13rem;
+}

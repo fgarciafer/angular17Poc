@@ -1,0 +1,61 @@
+<div class="container">
+  <div class="example">
+    <div class="example-detail">
+      @for (ci of cities; track ci.id) {
+        <p>{{ ci.name }}</p>
+      } @empty {
+        Empty list of cities
+      }
+    </div> 
+      <pre><code>
+        {{forvar}}
+      </code></pre>
+    </div>
+  <hr />
+  <div class="example">
+    <div class="example-detail">
+      <p-checkbox [(ngModel)]="loggedIn" [binary]="true" inputId="binary"></p-checkbox>
+      @if (loggedIn) {
+      <p>The user is logged in</p>
+      } @else {
+      <p>The user is not logged in</p>
+      } 
+    </div>
+    <pre><code>
+      {{ifvar}}
+    </code></pre>
+  </div>
+  
+  <hr />
+  <div class="example">
+    <div class="example-detail">
+
+  <div class="options">
+    <div class="flex align-items-center">
+        <p-radioButton name="Admin" value="admin" [(ngModel)]="accessLevel" inputId="id1"></p-radioButton>
+        <label for="id1" class="ml-2">Admin</label>
+    </div>
+    
+    <div class="flex align-items-center">
+        <p-radioButton name="Moderator" value="moderator" [(ngModel)]="accessLevel" inputId="id2"></p-radioButton>
+        <label for="id2" class="ml-2">Moderator</label>
+    </div>
+    
+    <div class="flex align-items-center">
+        <p-radioButton name="Other" value="other" [(ngModel)]="accessLevel" inputId="id3"></p-radioButton>
+        <label for="id3" class="ml-2">Other</label>
+    </div>
+  </div>
+  <div>
+    @switch (accessLevel) {
+      @case ('admin') { <p>You are an Admin</p> }
+      @case ('moderator') { <p>You are a Moderator</p> }
+      @default { <p>You are other</p> }
+    }
+  </div>
+</div>
+<pre><code>
+  {{switchvar}}
+</code></pre>
+</div>
+</div>

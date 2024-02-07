@@ -1,0 +1,62 @@
+
+<h2>Componentes diferidos</h2>
+
+<div class="interactive">
+    <div>
+        @defer (on interaction) {
+            <app-defered2 /> 
+        } @placeholder {
+            <div class="clickme">
+                <p>Click me!</p>
+            </div>
+        }
+    </div>
+    <div>
+        <p-button severity="danger" #btnInteraction label="Click me"></p-button>
+        @defer (on interaction(btnInteraction)) {
+            <app-defered2 /> 
+        } @placeholder {
+            <div class="clickme">
+                <p>Click me!</p>
+            </div>
+        }
+    </div>    
+    <div>
+        <p-button severity="danger" #btnInteraction2 label="Click me"></p-button>
+        @defer (on hover(btnInteraction2)) {
+            <app-defered2 /> 
+        } @placeholder {
+            <div class="clickme">
+                <p>Click me!</p>
+            </div>
+        }
+    </div>
+    <div>
+        @defer (on hover) {
+            <app-defered2 /> 
+        } @placeholder {
+            <div class="clickme">
+                <p>Click me!</p>
+            </div>
+        }
+    </div>
+</div>
+<hr />
+@defer {
+    <app-defered1 bgColor="red"/>
+} @placeholder {
+    <p class="loading">Cargando</p>
+}
+
+@defer (on idle) {
+    <app-defered1 bgColor="yellow"/>
+} @placeholder {
+    <p class="loading">Cargando</p>
+}
+
+
+@defer (on viewport) {
+    <app-defered1 bgColor="blue"/>
+} @placeholder {
+    <p class="loading">Cargando</p>
+}
